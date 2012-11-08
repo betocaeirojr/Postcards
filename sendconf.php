@@ -38,7 +38,7 @@ $html_msg .= "<tr><td>Greetings, $toname!";
 $html_msg .= "</td></tr><tr><td>";
 $html_msg .= "$fromname has sent you a postcard today.<br>Enjoy!";
 $html_msg .= "</td></tr><tr><td align=\"center\">";
-$html_msg .= "<img src=\”$postcard\” border=\"0\">";
+$html_msg .= "<img src=\"$postcard\" border=\"0\">";
 $html_msg .= "</td></tr><tr><td align=center>";
 $html_msg .= $messagebody . "\n";
 $html_msg .= "</td></tr></table></center>";
@@ -64,14 +64,12 @@ $confirmmessage = "Hello " . $fromname . ",\n\n";
 $confirmmessage .= "Please click on the link below to confirm that " .
 					"you would like to send this postcard:\n\n";
 $confirmmessage .= $html_msg . "\n\n";
-$confirmmessage .= "<a href=\"XXXXXXXX/confirm.php" .
+$confirmmessage .= "<a href=\"confirm.php" .
 					"?id=$msgid\">Click here to confirm</a>";
 $textconfirm = "Hello " . $fromname . ",\n\n";
-$textconfirm .= "Please visit the following URL to confirm your " .
-				"postcard:\n\n";
+$textconfirm .= "Please visit the following URL to confirm your postcard:\n\n";
 
-$textconfirm .= "confirm.php" .
-				"?id=$msgid";
+$textconfirm .= "confirm.php?id=$msgid";
 
 $message = "This is a Multipart Message in MIME format\n";
 $message .= "--$boundary\n";

@@ -37,7 +37,7 @@
 			<?php
 				include("db/connect_to_db.php");
 				
-				mysql_select_db("postcard");
+				// mysql_select_db("postcard");
 				
 				$sql = "SELECT * FROM images ORDER BY img_desc";
 				
@@ -59,6 +59,7 @@
 						echo "<option value=\"$iurl\">$idesc</option>\n";
 					}
 				}
+				mysql_free_result($images);
 			?>
 			</select><br>
 		</td>
